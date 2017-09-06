@@ -46,6 +46,7 @@ namespace QueryPlatform
             //显示启动窗体
             Application.Run(new fmMain2());
             // Application.Run(new Form4());
+            //修改
 
         }
     }
