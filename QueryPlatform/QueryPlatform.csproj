@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E2AE0C1-0F32-4FD5-B94F-6D74CC25A872}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QueryPlatform</RootNamespace>
+    <AssemblyName>QueryPlatform</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>程序图标.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Common\AccessData.cs" />
+    <Compile Include="Code\Common\CacheStrategy.cs" />
+    <Compile Include="Code\Common\Iterator.cs" />
+    <Compile Include="Code\Common\CommonStyle.cs" />
+    <Compile Include="Code\Common\Config.cs" />
+    <Compile Include="Code\Common\Result.cs" />
+    <Compile Include="Code\Common\UserFonts.cs" />
+    <Compile Include="Code\Controls_EX\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\Services\DepartmentModel.cs" />
+    <Compile Include="Code\Services\DistrictSerivce.cs" />
+    <Compile Include="Code\Services\LeadModel.cs" />
+    <Compile Include="FmCloseing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmCloseing.Designer.cs">
+      <DependentUpon>FmCloseing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmMain2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMain2.Designer.cs">
+      <DependentUpon>fmMain2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmWelcome.Designer.cs">
+      <DependentUpon>fmWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmQuickQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmQuickQuery.Designer.cs">
+      <DependentUpon>fmQuickQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Services\OperatorService.cs" />
+    <Compile Include="Code\Services\PinyinService.cs" />
+    <Compile Include="Code\Services\Class2.cs" />
+    <Compile Include="Code\Services\Class3.cs" />
+    <Compile Include="Code\Services\DictService.cs" />
+    <Compile Include="Code\Services\LeadService.cs" />
+    <Compile Include="Code\Services\Login.cs" />
+    <Compile Include="Code\Services\UnitService.cs" />
+    <Compile Include="Frm\BaseFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmArea.Designer.cs">
+      <DependentUpon>fmArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmChangePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmChangePwd.Designer.cs">
+      <DependentUpon>fmChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmLead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmLead.Designer.cs">
+      <DependentUpon>fmLead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmOperator.Designer.cs">
+      <DependentUpon>fmOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmOperatorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmOperatorEdit.Designer.cs">
+      <DependentUpon>fmOperatorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmQuery.Designer.cs">
+      <DependentUpon>fmQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmRedQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmRedQuery.Designer.cs">
+      <DependentUpon>fmRedQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmSetting.Designer.cs">
+      <DependentUpon>fmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmTip.Designer.cs">
+      <DependentUpon>fmTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\fmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\fmUnit.Designer.cs">
+      <DependentUpon>fmUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmCloseing.resx">
+      <DependentUpon>FmCloseing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmMain2.resx">
+      <DependentUpon>fmMain2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmWelcome.resx">
+      <DependentUpon>fmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmQuickQuery.resx">
+      <DependentUpon>fmQuickQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmArea.resx">
+      <DependentUpon>fmArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmChangePwd.resx">
+      <DependentUpon>fmChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmLead.resx">
+      <DependentUpon>fmLead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmOperator.resx">
+      <DependentUpon>fmOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmOperatorEdit.resx">
+      <DependentUpon>fmOperatorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmQuery.resx">
+      <DependentUpon>fmQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmRedQuery.resx">
+      <DependentUpon>fmRedQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmSetting.resx">
+      <DependentUpon>fmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmTip.resx">
+      <DependentUpon>fmTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\fmUnit.resx">
+      <DependentUpon>fmUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="File\Images\底栏图标\Thumbs.db" />
+    <None Include="File\Images\操作\Thumbs.db" />
+    <None Include="File\Images\编辑\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_large_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_large_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_large_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forum_add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\编辑.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工具.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\搜索.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\疑问.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\灯泡.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\时间.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\用户.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\文件.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\保存.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查询.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\更新.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\箭头右.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\箭头左.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\退出.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选中背景.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\杭州.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\湖州.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\嘉兴.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\金华.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\丽水.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\宁波.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\衢州.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\绍兴.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\台州.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\温州.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\兄弟局.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\浙江.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\舟山.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectListView\ObjectListView2012.csproj">
+      <Project>{18feda0c-d147-4286-b39a-01204808106a}</Project>
+      <Name>ObjectListView2012</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round-gvoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\程序图标.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="程序图标.ico" />
+    <None Include="Resources\地区背景.png" />
+    <Content Include="File\db.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="File\Images\arrow_large_down.png" />
+    <Content Include="File\Images\arrow_large_left.png" />
+    <Content Include="File\Images\arrow_large_right.png" />
+    <Content Include="File\Images\clock.png" />
+    <Content Include="File\Images\customers.gif" />
+    <Content Include="File\Images\file_edit.gif" />
+    <Content Include="File\Images\find.png" />
+    <Content Include="File\Images\forum_add.gif" />
+    <Content Include="File\Images\QQ图片20151015122217.png" />
+    <Content Include="File\Images\round-gvoice.png" />
+    <Content Include="File\Images\地区背景.png" />
+    <Content Include="File\Images\地图背景图标\丽水.png" />
+    <Content Include="File\Images\地图背景图标\兄弟局.png" />
+    <Content Include="File\Images\地图背景图标\台州.png" />
+    <Content Include="File\Images\地图背景图标\嘉兴.png" />
+    <Content Include="File\Images\地图背景图标\宁波.png" />
+    <Content Include="File\Images\地图背景图标\杭州.png" />
+    <Content Include="File\Images\地图背景图标\浙江.png" />
+    <Content Include="File\Images\地图背景图标\温州.png" />
+    <Content Include="File\Images\地图背景图标\湖州.png" />
+    <Content Include="File\Images\地图背景图标\绍兴.png" />
+    <Content Include="File\Images\地图背景图标\舟山.png" />
+    <Content Include="File\Images\地图背景图标\衢州.png" />
+    <Content Include="File\Images\地图背景图标\金华.png" />
+    <Content Include="File\Images\底栏图标\时间.png" />
+    <Content Include="File\Images\底栏图标\灯泡.png" />
+    <Content Include="File\Images\底栏图标\用户.png" />
+    <Content Include="File\Images\操作\工具.png" />
+    <Content Include="File\Images\操作\搜索.png" />
+    <Content Include="File\Images\操作\疑问.png" />
+    <Content Include="File\Images\操作\系统.png" />
+    <Content Include="File\Images\操作\编辑.png" />
+    <Content Include="File\Images\程序图标122.ico" />
+    <Content Include="File\Images\编辑\保存.png" />
+    <Content Include="File\Images\编辑\删除.png" />
+    <Content Include="File\Images\编辑\文件.png" />
+    <Content Include="File\Images\编辑\更新.png" />
+    <Content Include="File\Images\编辑\查询.png" />
+    <Content Include="File\Images\编辑\箭头右.png" />
+    <Content Include="File\Images\编辑\箭头左.png" />
+    <Content Include="File\Images\编辑\退出.png" />
+    <Content Include="File\picbar.bmp" />
+    <Content Include="File\Splash.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
